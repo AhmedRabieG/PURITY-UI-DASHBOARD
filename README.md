@@ -27,9 +27,6 @@ Role-Based Access Control
 Customizable Data Tables
 Form Generation System
 Multilingual Support
-Theme Customization
-📱 Screenshots
-[Add screenshots here]
 
 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
