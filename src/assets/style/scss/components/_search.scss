@@ -1,0 +1,14 @@
+.search-items-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.search-actions-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

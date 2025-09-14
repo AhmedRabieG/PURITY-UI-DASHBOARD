@@ -1,0 +1,19 @@
+/* src/assets/styles/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importing Tailwind CSS base styles */
+@tailwind base {
+
+}
+
+/* Importing Tailwind CSS components */
+@tailwind components {
+
+
+
+}
+
+/* Importing Tailwind CSS utilities */
+@tailwind utilities;
