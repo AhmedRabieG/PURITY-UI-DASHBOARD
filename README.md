@@ -20,7 +20,28 @@ Vee-validate
 Axios
 i18n
 📦 Project Structure
+src/
+├── components/          # Reusable UI components
+├── views/              # Page components
+├── store/              # State management
+├── router/             # Route definitions
+├── utils/              # Utility functions
+├── assets/             # Static assets
+└── locales/            # Translation files
+
 🔧 Installation
+# Clone repository
+git clone https://github.com/AhmedRabieG/PURITY-UI-DASHBOARD.git
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
 🌟 Key Components
 Dynamic Modal System
 Role-Based Access Control
