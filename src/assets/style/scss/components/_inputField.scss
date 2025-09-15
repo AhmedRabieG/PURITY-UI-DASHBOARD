@@ -1,0 +1,46 @@
+// input,
+// textarea,
+// select {
+//   height: 44px !important; /* or whatever you want */
+//   line-height: 1.5;
+//   padding: 0.75rem 1rem;
+//   border-radius: 0.5rem;
+//   height: auto;
+// }
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover,
+// input:-webkit-autofill:focus,
+// input:-webkit-autofill:active,
+// textarea:-webkit-autofill,
+// select:-webkit-autofill {
+//   line-height: 1.5;
+//   border-radius: 0.5rem;
+//   //   -webkit-box-shadow: 0 0 0 30px white inset !important;
+//   //   -webkit-text-fill-color: red !important;
+// }
+.v-field__input {
+  height: 48px;
+  min-height: auto;
+}
+.v-field__field {
+  height: 48px;
+  margin-bottom: 0px;
+}
+.v-input--density-default .v-input__control {
+  min-height: unset;
+  height: 48px;
+}
+
+////////////////////////////////////////////////////////////
+/// switch Field
+.v-selection-control__wrapper {
+  height: unset;
+}
+.v-input__control {
+  min-height: unset;
+  height: 48px;
+}
+.v-switch .v-selection-control {
+  min-height: unset;
+  height: 44\8px;
+}

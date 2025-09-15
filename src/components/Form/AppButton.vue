@@ -42,7 +42,7 @@ const btnStyle = computed(() => {
   <button
     :type="type"
     :class="[
-      'inline-flex justify-center gap-3 px-5 py-[0.94rem] rounded transition duration-500 ease-in-out m-[12px] disabled:opacity-50',
+      'inline-flex justify-center gap-3 px-5 py-[0.94rem] rounded transition duration-500 ease-in-out disabled:opacity-50',
       btnStyle,
     ]"
     :disabled="disabled || isLoading"

@@ -153,7 +153,9 @@ async function handleInitialModal() {
     //   console.log("showForm from handle after timeout =", showForm.value);
     // }, 0);
   } else {
+    console.log("props?.initialValues from handle =", props?.initialValues);
     initialModel.value = props?.initialValues;
+    console.log("initialModel.value from handle =", initialModel.value);
     showForm.value = true;
   }
 }
@@ -195,7 +197,7 @@ defineExpose({
       <span>{{ `${t(modalTitle)}` }}</span>
     </template>
     <template #content>
-      <div class="text-center py-8" v-if="isLoading">
+      <div v-if="isLoading" class="text-center py-8">
         <v-progress-circular
           class="mx-auto"
           color="#3484fa"
@@ -216,10 +218,10 @@ defineExpose({
         class="w-full h-full"
         ref="myform"
       >
-        <!-- {{ initialModel }} -->
+        <!-- {{ initialModel }} {{ slotProps.values }} -->
         <slot
           v-bind="slotProps"
-          :initialValue="initialModel"
+          :initialValues="initialModel"
           :currentMode="currentMode"
           :save="save"
         >

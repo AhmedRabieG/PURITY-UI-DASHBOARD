@@ -10,7 +10,12 @@ const { t } = useI18n({ useScope: "global" });
 const schema = yup.object({
   NameAr: yup.string().trim().required().label(t("NameAr")),
   NameEn: yup.string().trim().required().label(t("NameEn")),
+  IsActive: yup.boolean().required().label(t("Status")),
 });
+
+const logfun = (val) => {
+  console.log("val =", val);
+};
 </script>
 <template>
   <AddEditModal
@@ -24,7 +29,11 @@ const schema = yup.object({
     <div class="grid grid-cols-2 gap-4">
       <InputTextField name="NameAr" :label="$t('NameAr')" required />
       <InputTextField name="NameEn" :label="$t('NameEn')" required />
-      <SwitchField name="IsActive" :label="$t('IsActive')" />
+      <SwitchField
+        name="IsActive"
+        :label="$t('Status')"
+        @update:modelValue="logfun"
+      />
     </div>
   </AddEditModal>
 </template>

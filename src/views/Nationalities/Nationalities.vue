@@ -22,7 +22,7 @@ const ActivationList = ref([
     title="Nationalities"
     :addTitle="t('AddNationality')"
     apiGetAllUrl="Country/AdminGetAll"
-    :thead="['NameAr', 'NameEn', 'Actions']"
+    :thead="['NameAr', 'NameEn', 'Status', 'Actions']"
   >
     <template #search>
       <InputTextField name="Name" :label="$t('Name')" />
@@ -48,7 +48,7 @@ const ActivationList = ref([
       <tr v-for="item in slotProps?.modelList" :key="item">
         <td>{{ item?.NameAr }}</td>
         <td>{{ item?.NameEn }}</td>
-        <!-- <td>{{ item?.Status }}</td> -->
+        <td>{{ item?.IsActive ? t("Active") : t("Inactive") }}</td>
         <td class="action-column">
           <TableActions>
             <TableViewAction :item="item" />

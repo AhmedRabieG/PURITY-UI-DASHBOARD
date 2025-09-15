@@ -5,6 +5,7 @@ import SharedTable from "@/components/Shared/SharedTable.vue";
 import AddAction from "@/components/Structure/AddAction.vue";
 import SearchPanel from "@/components/Structure/SearchPanel.vue";
 import { useI18n } from "vue-i18n";
+
 const { t } = useI18n({ useScope: "global" });
 const props = defineProps({
   title: String,
@@ -92,10 +93,7 @@ function handlePreDelete() {
 }
 </script>
 <template>
-  <pre>erefe:{{ showAddEditModal }}</pre>
-  <pre>currentMode:{{ currentMode }}</pre>
   <slot name="befoterSearch"></slot>
-
   <SearchPanel
     :initialValues="initialFilter"
     @submitSearch="search($event)"
@@ -104,7 +102,7 @@ function handlePreDelete() {
   >
     <slot name="search" v-bind="slotProps"></slot>
   </SearchPanel>
-  <div class="bg-white">
+  <div class="bg-white p-6">
     <div>
       <AddAction
         v-if="!!addTitle"

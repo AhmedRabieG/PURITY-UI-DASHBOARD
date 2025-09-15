@@ -13,7 +13,6 @@ const props = defineProps({
   },
   label: {
     type: String,
-    default: "",
   },
   disabled: {
     type: Boolean,
@@ -36,6 +35,10 @@ const props = defineProps({
     type: String,
     default: "success",
   },
+  rules: {
+    type: [String, Object],
+    default: null,
+  },
 });
 
 const {
@@ -45,7 +48,8 @@ const {
   errorMessage,
 } = useField(() => props.name, props.rules, {
   type: "checkbox",
-  checkedValue: props.value,
+  checkedValue: props.checkedValue,
+  initialValue: props.modelValue,
 });
 
 const emit = defineEmits(["update:modelValue"]);
@@ -54,13 +58,13 @@ watch(inputValue, (newValue) => {
   emit("update:modelValue", newValue);
 });
 
-handleChange(props.value);
+handleChange(props.modelValue);
 </script>
 <template>
   <div>
     <v-switch
       v-model="inputValue"
-      :label="Switch"
+      :label="label"
       :inset="inset"
       :disabled="disabled || currentMode == 'view'"
       :readonly="readonly"
@@ -68,7 +72,6 @@ handleChange(props.value);
       type="checkbox"
       :color="color"
       :error-messages="errors"
-      @change="$emit('update:modelValue', $event)"
     >
     </v-switch>
   </div>
